@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"c1a1eb60f50a7b59","type":"text","text":"[[Information Gathering.canvas|Information Gathering]]","x":-760,"y":-2249,"width":250,"height":50,"color":"1"},
+		{"id":"70f4a084c1bdc4c1","type":"text","text":"Service Enumeration\nWeb Enumeration\nApplication Enumeration\nActive Directory Enumeration","x":-760,"y":-2199,"width":250,"height":161,"color":"1"},
+		{"id":"9bee0a9114ea82d7","type":"text","text":"[[Post-Exploitation.canvas|Post-Exploitation]]","x":-460,"y":-2249,"width":250,"height":50,"color":"2"},
+		{"id":"3f3f32eebce0a5f9","type":"text","text":"Fully Interactive TTY\nLinux Post Exploitation\nTools\nWindows Post Exploitation","x":-460,"y":-2199,"width":250,"height":170,"color":"2"},
+		{"id":"89a5c5d78febbeb4","type":"text","text":"[[NetExec.canvas|NetExec]]\n","x":-160,"y":-2249,"width":250,"height":50,"color":"3"},
+		{"id":"83a855d53587a28c","type":"text","text":"Working With Modules\nMapping and Enumeration SMB\nLDAP and RDP Enumeration\nCommand Exection\nDumping Secrets\nPopular Modules\nVulnerability Scan Modules\nKerberos Authentication","x":-160,"y":-2199,"width":250,"height":322,"color":"3"},
+		{"id":"92a62bf6216111ae","type":"text","text":"[[Post-Exploitation.canvas|Post-Exploitation]]","x":-760,"y":-2017,"width":250,"height":50,"color":"4"},
+		{"id":"03ec10669aa06c19","type":"text","text":"Password List Generation\nShells\nTools","x":-760,"y":-1967,"width":250,"height":110,"color":"4"},
+		{"id":"65f65d5bbbef64d3","type":"text","text":"[[Lateral Movement.canvas|Lateral Movement]]","x":-460,"y":-2017,"width":250,"height":50,"color":"5"},
+		{"id":"48383114a1c0ca4f","type":"text","text":"Active Directory Lateral Movement\nPivoting\nWindows Lateral Movement\nTools","x":-460,"y":-1967,"width":250,"height":194,"color":"5"},
+		{"id":"3da5c2669c6d2179","type":"text","text":"[[Exploitation.canvas|Exploitation]]","x":-760,"y":-1840,"width":250,"height":50,"color":"6"},
+		{"id":"757903a7757f0343","type":"text","text":"Active Directory Attack\nApplication Exploitation\nBinary Exploitation\nService Exploitation\nWeb Exploitation","x":-760,"y":-1790,"width":250,"height":180,"color":"6"}
+	],
+	"edges":[]
+}
