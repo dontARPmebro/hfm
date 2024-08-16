@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"177bc44751e1661b","type":"text","text":"Service Enumeration","x":-800,"y":-600,"width":250,"height":50,"color":"1"},
+		{"id":"3ec0ef2569fa1697","type":"text","text":"[[DNS (53)]]\n[[FTP (21)]]\n[[IMAP (143,993)]]\n[[IPMI (623)]]\n[[Kerberos (88)]]\n[[MSSQL (1433,1434,2433)]]\n[[MySQL (3306)]]\n[[NFS (2049)]]\n[[Oracle TNS (1521)]]\n[[POP3 (110,995)]]\n[[RDP (3389)]]\n[[Rsync (873)]]\n[[SMB (139,445)]]\n[[SMTP (25,465,587)]]\n[[SNMP (512,162,10161,10162)]]\n[[SSH (22)]]\n[[TFTP (69)]]\n[[WinRM (5985,5986)]]","x":-800,"y":-550,"width":250,"height":560,"color":"1"},
+		{"id":"1de53f00d16cddf0","type":"text","text":"Web Enumeration","x":-550,"y":-600,"width":250,"height":50,"color":"2"},
+		{"id":"ccd59029b41a9e70","type":"text","text":"Active Directory","x":-300,"y":-600,"width":250,"height":50,"color":"3"},
+		{"id":"9aba367badd2c045","type":"text","text":"Application Enumeration","x":-50,"y":-600,"width":250,"height":50,"color":"4"},
+		{"id":"97c40dd7a0a54b0c","type":"text","text":"[[Active]]\n[[Passive]]\n[[Nmap]]","x":-550,"y":-550,"width":250,"height":255,"color":"2"},
+		{"id":"42d8906cbe76ced8","type":"text","text":"[[Host Enumeration]]\n[[User Enumeration]]\n[[SMB Enumeration]]\n[[Password Policy Enumeration]]\n[[Enumerating Security Controls]]\n[[ACL Enumeration]]\nTools:\n- [[Bloodhound]]\n- [[PowerView]]","x":-300,"y":-550,"width":250,"height":350,"color":"3"},
+		{"id":"45076ea5d0639cf0","type":"text","text":"[[hfm/1. Information Gathering/Application Enumeration/Wordpress]]\n[[hfm/1. Information Gathering/Application Enumeration/Joomla]]\n[[hfm/1. Information Gathering/Application Enumeration/Drupal]]\n[[hfm/1. Information Gathering/Application Enumeration/Tomcat]]\n[[hfm/1. Information Gathering/Application Enumeration/Jenkins]]\n[[hfm/1. Information Gathering/Application Enumeration/Splunk]]\n[[hfm/1. Information Gathering/Application Enumeration/PRTG Network Monitor]]\n[[hfm/1. Information Gathering/Application Enumeration/osTicket]]\n[[hfm/1. Information Gathering/Application Enumeration/GitLab]]\n[[IIS Tilde Enumeration]]","x":-50,"y":-550,"width":250,"height":305,"color":"4"},
+		{"id":"b1f505918d273a11","type":"text","text":"Tools","x":-300,"y":-170,"width":250,"height":50,"color":"5"},
+		{"id":"2ebd62fbfc9b4cd5","type":"text","text":"[[Nmap]]\n[[tcpdump]]\n[[WMIexec]]\n[[creds]]","x":-300,"y":-120,"width":250,"height":130,"color":"5"},
+		{"id":"64e709b105725457","type":"text","text":"[[Index.canvas|Index]]","x":75,"y":-50,"width":125,"height":60,"color":"6"}
+	],
+	"edges":[]
+}
