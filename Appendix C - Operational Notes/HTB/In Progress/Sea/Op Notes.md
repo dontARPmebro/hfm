@@ -4,7 +4,7 @@ tags:
   - HTB
   - Season6
   - XSS
-  - Hijacking
+  - deserialization
 creation date: 2024-08-16T14:50:00
 CVEs: 10.129.13.15
 URL:
