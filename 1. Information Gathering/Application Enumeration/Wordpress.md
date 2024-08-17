@@ -1,7 +1,15 @@
 [[Index.canvas|Index]]
 
-## basic usage
+## additional flags
+```
+-v -e --plugins-detection aggressive --api-token $(cat ~/Resource/wpscan_api_token) -o wpscan_results
+```
 
+## with API token
+```
+wpscan --url http://192.168.56.104/ --http-auth elliot:ER28-0652 --api-token QqoyStKXPlydupJbq5IDVOLxt16WvSSXrkj1Pas5gaY
+```
+## basic usage
 ```
 wpscan --url "target" --verbose
 ```

@@ -66,7 +66,7 @@ cd /home/; ls -lsaht
 ```
 
 ```
-cat /etc/passwd | egrep -ve “nologin|false”
+cat /etc/passwd | grep -vE 'nologin|sync|false'
 cat /etc/passwd | grep -v nologin | grep -v false
 cat /etc/password | grep -v "nologin\|false\|sync"
 ```
@@ -100,6 +100,7 @@ ps aux | grep -i 'root' --color=auto
 ## MYSQL
 ```
 mysql -uroot -p
+sqldump -u root -p toor > dbname.sql
 ```
 
 Enter Password:
@@ -204,4 +205,43 @@ cd /var/mail/; ls -lsaht
 ```session
 aureport --tty | grep -E "su |sudo " | sed -E "s,su|sudo,${C}[1;31m&${C}[0m,g"
 grep -RE 'comm="su"|comm="sudo"' /var/log* 2>/dev/null
+```
+
+## Credential Hunting
+
+### .conf, .config, .cnf 
+```
+for l in $(echo ".conf .config .cnf");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "lib\|fonts\|share\|core" ;done
+```
+
+### .cnf
+
+```
+for i in $(find / -name *.cnf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
+```
+
+### .config
+
+```
+for i in $(find / -name *.config 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
+```
+
+### .conf
+
+```
+for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
+```
+
+### user in .conf
+
+```
+for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "mtz" $i 2>/dev/null | grep -v "\#";done
+```
+
+### credentials in .old files
+
+```
+for i in $(find / -name *.old 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
+
+for l in $(echo ".old");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "lib\|fonts\|share\|core" ;done
 ```

@@ -21,3 +21,8 @@ john --show
 ```
 john --restore
 ```
+
+## Random
+```
+john --format=<format> hashfile.txt wordlist.txt --forks=4
+```
