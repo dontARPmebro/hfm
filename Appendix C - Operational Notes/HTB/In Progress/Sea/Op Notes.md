@@ -112,6 +112,7 @@ Basically he says keep looking at the website and it's code 😒
 
 ### Checking out the code
 
+literally searching github for various lines from the code
 ![[Pasted image 20240817083717.png]]
 
 ![[Pasted image 20240817083732.png]]
