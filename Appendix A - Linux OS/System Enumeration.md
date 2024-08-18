@@ -187,9 +187,6 @@ Look for unusual system-wide cron jobs:
 
 ```
 cat /etc/crontab
-
-crontab -e
-
 ls /etc/cron.*
 ```
 ## File ownership
@@ -202,6 +199,7 @@ find / -user bob 2>/dev/null
 cd /var/mail/; ls -lsaht
 ```
 ## Logs
+must be in the adm group
 ```session
 aureport --tty | grep -E "su |sudo " | sed -E "s,su|sudo,${C}[1;31m&${C}[0m,g"
 grep -RE 'comm="su"|comm="sudo"' /var/log* 2>/dev/null
@@ -245,3 +243,9 @@ for i in $(find / -name *.old 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFi
 
 for l in $(echo ".old");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "lib\|fonts\|share\|core" ;done
 ```
+
+
+run these when you've exhaused all the above:
+### PSPY
+
+### Linpeas
