@@ -233,7 +233,7 @@ for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nF
 ### user in .conf
 
 ```
-for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "mtz" $i 2>/dev/null | grep -v "\#";done
+for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "tomcatadm" $i 2>/dev/null | grep -v "\#";done
 ```
 
 ### credentials in .old files
