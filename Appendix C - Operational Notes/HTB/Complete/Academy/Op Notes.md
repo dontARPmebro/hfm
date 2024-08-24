@@ -3,11 +3,15 @@ tags:
   - Linux
   - HTB
   - Retired
-creation date: 2024-08-17
+  - laravel
+  - logs
+creation date: ""
+Date Completed: 2024-08-17
 IP: 10.129.99.197
 URL: https://app.hackthebox.com/machines/Academy
 Domain: academy.htb
 CVEs: CVE-2018-15133
+New Tools: autoreport
 ---
 ## Information Gathering
 ### Nmap (Ports/Services)

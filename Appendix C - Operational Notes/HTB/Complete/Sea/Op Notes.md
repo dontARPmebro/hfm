@@ -4,9 +4,12 @@ tags:
   - HTB
   - XSS
   - deserialization
-creation date: 2024-08-16T14:50:00
+  - WonderCMS
+creation date: ""
+Date Completed: 2024-08-16
 CVEs: CVE-2023-41425
-URL:
+URL: 
+New Tools:
 ---
 ## Information Gathering
 ### Nmap
