@@ -4,7 +4,7 @@ tags:
   - HTB
   - Retired
 creation date: 2024-08-17
-Date Completed: 
+Date Completed: 2024-08-24
 CVEs: CVE-2021-43008
 URL: https://app.hackthebox.com/machines/Admirer
 New Tools: AdminerRead

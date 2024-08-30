@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"ff3eb1dee11d9cb4","type":"text","text":"## Windows Boxes","x":-125,"y":-320,"width":250,"height":60,"color":"5"},
+		{"id":"3c97cacf97b1522b","type":"text","text":"## AD Boxes","x":125,"y":-320,"width":250,"height":60,"color":"5"},
+		{"id":"cfe3bef5a778dcf2","type":"text","text":"Helpdesk\nAlgemon\nAuthby\nCraft2\nHutch\nInternal\nJacko\nKevin\nResourced\nSquid\nDVR4\nHepet\nShenzi\nNickel\nSlort","x":-125,"y":-260,"width":250,"height":420,"color":"4"},
+		{"id":"6b82b26b79dd30a2","type":"text","text":"Access\nHeist\nVault\nNagoya\nHokkaido","x":125,"y":-260,"width":250,"height":230,"color":"4"},
+		{"id":"cef4b1b06d64b3bd","type":"text","text":"# Proving Grounds Box List","x":-375,"y":-380,"width":750,"height":60,"color":"1"},
+		{"id":"87df72e27db7040d","type":"text","text":"## Linux Boxes","x":-375,"y":-320,"width":250,"height":60,"color":"5"},
+		{"id":"f4242282d2195eba","type":"text","text":"Twiggy\nExfiltrated\nPelican\nAstronaut\nBlackgate\nBoolean\nClue\nCockpit\nCodo\nCrane\nLevram\nExplorer\nHub\nImage\nLaw\nLavita\nPC\nPlum\nPress\nPyLoader\nRubyDome\nZipper\nFlue\nOchima","x":-375,"y":-260,"width":250,"height":640,"color":"4"}
+	],
+	"edges":[]
+}
