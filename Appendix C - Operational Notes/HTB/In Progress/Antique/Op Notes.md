@@ -90,3 +90,6 @@ post/multi/escalate/cups_root_file_read
 
 also works:
 https://github.com/p1ckzi/CVE-2012-5519/blob/main/cups-root-file-read.sh
+
+writeup with ways to go beyond root
+https://0xdf.gitlab.io/2022/05/03/htb-antique.html#cve-2015-1158
