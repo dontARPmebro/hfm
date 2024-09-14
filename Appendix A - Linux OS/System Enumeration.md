@@ -68,7 +68,7 @@ cd /home/; ls -lsaht
 ```
 cat /etc/passwd | grep -vE 'nologin|sync|false'
 cat /etc/passwd | grep -v nologin | grep -v false
-cat /etc/password | grep -v "nologin\|false\|sync"
+cat /etc/passwd | grep -v "nologin\|false\|sync"
 ```
 ## Web Configs containing credentials
 ```
@@ -192,7 +192,7 @@ ls /etc/cron.*
 ## File ownership
 Bob is a user on this machine. What is every single file he has ever created?
 ```
-find / -user bob 2>/dev/null
+find / -user brucetherealadmin 2>/dev/null
 ```
 ## Got Mail?
 ```
@@ -233,14 +233,23 @@ for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nF
 ### user in .conf
 
 ```
-for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "tomcatadm" $i 2>/dev/null | grep -v "\#";done
+for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "brucetherealadmin" $i 2>/dev/null | grep -v "\#";done
+```
+
+
+### .sh files
+
+```
+for i in $(find / -name *.sh 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
 ```
 
 ### credentials in .old files
 
 ```
 for i in $(find / -name *.old 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
+```
 
+```
 for l in $(echo ".old");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "lib\|fonts\|share\|core" ;done
 ```
 
