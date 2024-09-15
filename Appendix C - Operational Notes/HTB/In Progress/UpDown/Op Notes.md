@@ -3,6 +3,7 @@ tags:
   - HTB
   - Retired
   - Linux
+  - htaccess
 creation date: 2022-09-03
 Date Completed: 2024-08-24
 CVEs: 
@@ -29,16 +30,40 @@ sudo nmap -sT -sV -sC -O -p- -T4 --min-rate=1000 $IP
 
 ### ffuf (Directories/Subdomain/Files)
 ```session
-ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-large-files-lowercase.txt:FUZZ -u $URL/FUZZ
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-large-files-lowercase.txt:FUZZ -u $URL/FUZZ -c
 ```
 
 ```session
-ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-large-directories-lowercase.txt:FUZZ -u $URL/FUZZ
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-large-directories-lowercase.txt:FUZZ -u $URL/FUZZ -c
 ```
+http://10.129.16.49/.git
 
 ```session
-ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt:FUZZ -u $URL -H "HOST: FUZZ.domain.htb"
+ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt:FUZZ -u $URL -H "HOST: FUZZ.siteisup.htb"
 ```
 
-### Nikto (Identify Technology)
+dev.siteisup.htb
+
+also used: /usr/share/wordlists/dirb/common.txt
+its the one that actually found .git/HEAD
+### git-dumper
+
+```
+git-dumper http://siteisup.htb/dev/.git dev
+```
+
+
+#### clues
+
+![[Pasted image 20240914195830.png]]
+
+![[Pasted image 20240914195759.png]]
+
+### htaccess 
+
+![[Pasted image 20240914195533.png]]
+
+#### Burp it
+
+![[Pasted image 20240914195048.png]]
 
