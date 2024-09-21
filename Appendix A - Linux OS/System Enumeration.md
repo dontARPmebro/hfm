@@ -205,18 +205,21 @@ aureport --tty | grep -E "su |sudo " | sed -E "s,su|sudo,${C}[1;31m&${C}[0m,g"
 grep -RE 'comm="su"|comm="sudo"' /var/log* 2>/dev/null
 ```
 
-## Credential Hunting
+## Config file Hunting
 
-### .conf, .config, .cnf 
+###  .conf, .config, .cnf 
 ```
 for l in $(echo ".conf .config .cnf");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "lib\|fonts\|share\|core" ;done
 ```
 
-### .cnf
+
 
 ```
 for i in $(find / -name *.cnf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
 ```
+
+
+## Credential Hunting
 
 ### .config
 
@@ -233,7 +236,7 @@ for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nF
 ### user in .conf
 
 ```
-for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "brucetherealadmin" $i 2>/dev/null | grep -v "\#";done
+for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user" $i 2>/dev/null | grep -v "\#";done
 ```
 
 
