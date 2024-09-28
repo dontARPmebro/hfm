@@ -192,7 +192,7 @@ ls /etc/cron.*
 ## File ownership
 Bob is a user on this machine. What is every single file he has ever created?
 ```
-find / -user brucetherealadmin 2>/dev/null
+find / -user chris 2>/dev/null
 ```
 ## Got Mail?
 ```
@@ -233,10 +233,10 @@ for i in $(find / -name *.config 2>/dev/null | grep -v "doc\|lib");do echo -e "\
 for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
 ```
 
-### user in .conf
+### .cnf
 
 ```
-for i in $(find / -name *.conf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user" $i 2>/dev/null | grep -v "\#";done
+for i in $(find / -name *.cnf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
 ```
 
 

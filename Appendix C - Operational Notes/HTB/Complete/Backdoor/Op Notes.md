@@ -6,6 +6,7 @@ tags:
   - WordPress
   - Screen
   - gdbserver
+  - easy
 creation date: 2021-11-20
 Date Completed: 2024-09-21
 CVEs: 
