@@ -1,15 +1,15 @@
 ---
 tags:
-  - Linux
   - HTB
-  - XSS
-  - deserialization
-  - WonderCMS
+  - Windows
+  - easy
+  - Seasonal
 creation date: ""
 Date Completed: 2024-08-16
 CVEs: CVE-2023-41425
 URL: 
-New Tools:
+New Tools: 
+IP: 10.129.28.68
 ---
 ## Information Gathering
 ### Nmap
