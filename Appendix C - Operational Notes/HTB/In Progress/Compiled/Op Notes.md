@@ -260,3 +260,12 @@ to list directories in windows
 ```
 gci -force 
 ```
+
+
+try this
+
+```
+$reg = [Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey('LocalMachine', 'dc.htb.local',[Microsoft.Win32.RegistryView]::Registry64)
+$winlogon = $reg.OpenSubKey('SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon')
+$winlogon.GetValueNames() | foreach {"$_ : $(($winlogon).GetValue($_))"}
+```
