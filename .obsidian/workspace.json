@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "5dea4db3d16bb84d",
+    "type": "split",
+    "children": [
+      {
+        "id": "578f3540390bd4ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ead927c6e229fbec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Appendix F - Scripts/OSCP Scripts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "49d24222fbf489c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "1aec2c16b2fb0dbb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "983baf7fdc5cfe1b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bb41ccc8a0d687d7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f816ac8172f1dd8f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e6609a0f50e7a4f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f1e8a618fee9653",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "28847e1e38ddd87e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Appendix F - Scripts/OSCP Scripts.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a823e11e7646678e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Appendix F - Scripts/OSCP Scripts.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9abebca0f792b52b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e9c0c5e48b61f8c2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Appendix F - Scripts/OSCP Scripts.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ead927c6e229fbec",
+  "lastOpenFiles": [
+    "Appendix C - Operational Notes/HTB/In Progress/Cicada/Op Notes.md"
+  ]
+}
