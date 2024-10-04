@@ -211,7 +211,7 @@ emily:97907280dc24fe517c43475bd218bfad56c25d4d11037d8b6da440efd4d691adfead40330b
 97907280dc24fe517c43475bd218bfad56c25d4d11037d8b6da440efd4d691adfead40330b2aa6aaf1f33621d0d73228fc16:227d873cca89103cd83a976bdac52486
 
 I went from this basic python script https://cryptobook.nakov.com/mac-and-key-derivation/pbkdf2
-to the script below thanks to my new love gemini
+to the script below thanks to my new love, gemini
 
 I 💖 gemini
 ```
@@ -248,7 +248,7 @@ emily:12345678
 ## Foothold
 
 ```
-evil-winrm -i 10.129.231.87 -u emily -p '12345678'
+evil-winrm -i 10.129.3.69 -u emily -p '12345678'
 ```
 
 winpeas as emily
@@ -261,11 +261,28 @@ to list directories in windows
 gci -force 
 ```
 
+# Priv Esc Attempts
 
-try this
+
+
+![[Pasted image 20241004125511.png]]
+
+![[Pasted image 20241004125448.png]]
+
 
 ```
-$reg = [Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey('LocalMachine', 'dc.htb.local',[Microsoft.Win32.RegistryView]::Registry64)
-$winlogon = $reg.OpenSubKey('SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon')
-$winlogon.GetValueNames() | foreach {"$_ : $(($winlogon).GetValue($_))"}
+Set-ExecutionPolicy Bypass -Scope CurrentUser
 ```
+Maybe something 
+
+![[Pasted image 20241004142923.png]]
+
+![[Pasted image 20241004143641.png]]
+
+
+# Thanks Kurt
+
+https://www.mdsec.co.uk/2024/01/cve-2024-20656-local-privilege-escalation-in-vsstandardcollectorservice150-service/
+
+https://github.com/Wh04m1001/CVE-2024-20656/tree/main
+

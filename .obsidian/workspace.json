@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appendix F - Scripts/OSCP Scripts.md",
+                "file": "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appendix F - Scripts/OSCP Scripts.md",
+                "file": "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appendix F - Scripts/OSCP Scripts.md",
+                "file": "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appendix F - Scripts/OSCP Scripts.md"
+                "file": "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md"
               }
             }
           }
@@ -148,6 +148,17 @@
   },
   "active": "ead927c6e229fbec",
   "lastOpenFiles": [
+    "Pasted image 20241004143641.png",
+    "Pasted image 20241004142923.png",
+    "Appendix D - Tools/winPEAS.md",
+    "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
+    "Appendix C - Operational Notes/HTB/Complete/Cicada/Op Notes.md",
+    "Appendix C - Operational Notes/HTB/In Progress/UpDown/Op Notes.md",
+    "1. Information Gathering/Service Enumeration/SMB (139,445).md",
+    "Appendix B - Windows OS/System Enumeration.md",
+    "Pasted image 20241004125511.png",
+    "Pasted image 20241004125448.png",
+    "Appendix F - Scripts/OSCP Scripts.md",
     "Appendix C - Operational Notes/HTB/In Progress/Cicada/Op Notes.md"
   ]
 }
