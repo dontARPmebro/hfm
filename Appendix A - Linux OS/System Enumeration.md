@@ -246,6 +246,10 @@ for i in $(find / -name *.cnf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFi
 for i in $(find / -name *.sh 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
 ```
 
+### .ini files
+```
+for i in $(find / -name *.ini 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
+```
 ### credentials in .old files
 
 ```
@@ -256,6 +260,16 @@ for i in $(find / -name *.old 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFi
 for l in $(echo ".old");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "lib\|fonts\|share\|core" ;done
 ```
 
+## Find DB files
+```
+for l in $(echo ".sql .db .*db .db*");do echo -e "\nDB File extension: "$l;find/ -name *$l 2>/dev/null | grep -v "doc\|lib\|headers\|share\|man";done
+```
+
+## Find Scripts
+
+```
+for l in $(echo ".py .pyc .pl .go .jar .c .sh");do echo -e "\nFile extension: "$l;find / -name *$l 2>/dev/null | grep -v "doc\|lib\|headers\|share";done
+```
 
 run these when you've exhaused all the above:
 ### PSPY
