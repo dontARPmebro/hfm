@@ -11,11 +11,14 @@
             "id": "ead927c6e229fbec",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
-                "mode": "source",
-                "source": false
+                "file": "Appendix G - Box Lists/OSCP/HTB Box List.canvas",
+                "viewState": {
+                  "x": -505,
+                  "y": -310,
+                  "zoom": 0
+                }
               }
             }
           }
@@ -85,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
+                "file": "Appendix G - Box Lists/OSCP/HTB Box List.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
+                "file": "Appendix G - Box Lists/OSCP/HTB Box List.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md"
+                "file": "Appendix G - Box Lists/OSCP/HTB Box List.canvas"
               }
             }
           }
@@ -148,6 +151,7 @@
   },
   "active": "ead927c6e229fbec",
   "lastOpenFiles": [
+    "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
     "Appendix C - Operational Notes/HTB/In Progress/Compiled/attachments/Pasted image 20241011150111.png",
     "Appendix C - Operational Notes/HTB/In Progress/Compiled/attachments/Pasted image 20241011150045.png",
     "Appendix C - Operational Notes/HTB/In Progress/Compiled/attachments/Pasted image 20241004143641.png",
@@ -162,12 +166,10 @@
     "Pasted image 20241004143641.png",
     "Pasted image 20241004142923.png",
     "Appendix D - Tools/winPEAS.md",
-    "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
     "Appendix C - Operational Notes/HTB/Complete/Cicada/Op Notes.md",
     "Appendix C - Operational Notes/HTB/In Progress/UpDown/Op Notes.md",
     "1. Information Gathering/Service Enumeration/SMB (139,445).md",
     "Appendix B - Windows OS/System Enumeration.md",
-    "Pasted image 20241004125511.png",
     "Appendix F - Scripts/OSCP Scripts.md",
     "Appendix C - Operational Notes/HTB/In Progress/Cicada/Op Notes.md"
   ]
