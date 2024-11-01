@@ -3,9 +3,11 @@ tags:
   - HTB
   - Linux
   - Seasonal
+  - pymatgen
+  - aiohttp
 creation date: 2018-09-29
-Date Completed: 2024-08-24
-CVEs: 
+Date Completed: 2024-08-21
+CVEs: CVE-2024-23334 CVE-2024-23346
 URL: 
 IP: 10.129.225.128
 ---
@@ -173,7 +175,6 @@ proxychains firefox http://127.0.0.1:8080
 
 ![[Pasted image 20241026083159.png]]
 
-# Priv Esc
 ## Linpeas
 
 nothing:
@@ -191,3 +192,23 @@ false:
 proxychains4 dirb http://127.0.0.1:8080/
 
 proxychains4 curl http://127.0.0.1/8080
+
+rosa
+unicorniosrosados
+
+====
+proxychains4 dirb http://127.0.0.1:8080
+proxychains4 dirb http://127.0.0.1:8080/ /opt/useful/seclists/Discovery/Web-Content/raft-large-files.txt
+
+curl http://127.0.0.1:8080/assests/js/script.js
+curl http://127.0.0.1:8080/assets/css/style.css
+
+# Priv Esc
+
+proxychains whatweb -v http://127.0.0.1:8080
+Python/3.9 aiohttp/3.9.1
+https://github.com/z3rObyte/CVE-2024-23334-PoC
+https://github.com/jhonnybonny/CVE-2024-23334/blob/main/exploit.py
+
+If you actually read the exploit (sometimes it takes finding a good article that explains whats happening) it will be a lot easier to modify the exploit so it works.
+https://github.com/wizarddos/CVE-2024-23334
