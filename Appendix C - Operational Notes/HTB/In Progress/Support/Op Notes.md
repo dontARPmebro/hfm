@@ -9,9 +9,9 @@ tags:
   - kirbi
   - ldap
 creation date: 2022-07-30
-Date Completed: ""
+Date Completed: 2024-11-01
 CVEs: 
-URL: 
+URL: https://app.hackthebox.com/machines/Support
 IP: 10.129.123.182
 New Tools: dnSpy, netexec, powermad.ps1, ticketConverter.py, searchRBCD.ps1
 ---
