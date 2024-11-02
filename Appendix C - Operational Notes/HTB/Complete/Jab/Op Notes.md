@@ -6,12 +6,13 @@ tags:
   - ASREP
   - ASREPRoast
   - DCOM
+  - chisel
 creation date: 2024-02-24
 Date Completed: 2024-11-08
 CVEs: CVE-2023-32315
 URL: https://app.hackthebox.com/machines/589
 IP: 10.129.210.4
-New Tools: wmi-client, dcomexec.py
+New Tools: wmi-client, dcomexec.py, chisel
 ---
 ## Information Gathering
 #### Nmap (Ports/Services)
