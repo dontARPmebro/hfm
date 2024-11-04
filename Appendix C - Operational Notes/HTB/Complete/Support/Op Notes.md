@@ -8,6 +8,7 @@ tags:
   - RBCD
   - kirbi
   - ldap
+  - easy
 creation date: 2022-07-30
 Date Completed: 2024-11-01
 CVEs: 

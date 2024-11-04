@@ -7,6 +7,7 @@ tags:
   - ASREPRoast
   - DCOM
   - chisel
+  - medium
 creation date: 2024-02-24
 Date Completed: 2024-11-08
 CVEs: CVE-2023-32315

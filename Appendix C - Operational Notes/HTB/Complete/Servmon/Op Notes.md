@@ -5,6 +5,7 @@ tags:
   - Windows
   - nagios
   - proxychains
+  - easy
 creation date: 2018-09-29
 Date Completed: 2024-08-24
 CVEs: CVE-2019-20085
