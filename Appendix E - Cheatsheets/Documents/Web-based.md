@@ -1,16 +1,16 @@
 ## Cheatsheets
 
-[Offensive Security Cheatsheet](https://cheatsheet.haax.fr/)
+[Offensive Security Cheatsheet](https://cheatsheet.haax.fr/)⭐
 
 [HackTricks](https://book.hacktricks.xyz)
 
 [OSCP Notes](https://strange-1.gitbook.io/notes)
 
-[OSCP Cheatsheet](https://github.com/0xsyr0/OSCP)
+[OSCP Cheatsheet](https://github.com/0xsyr0/OSCP) ⭐
 
 https://infinitelogins.com/enumeration-cheatsheets/
 
-https://guide.offsecnewbie.com/general-methodology
+https://guide.offsecnewbie.com/general-methodology 👍
 ## Blogs 
 
 [How I Passed the OSCP](https://warranty-v01d.pages.dev/posts/how-i-passed-the-oscp/)
