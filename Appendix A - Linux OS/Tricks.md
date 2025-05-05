@@ -74,3 +74,53 @@ check port status
 ```
 netstat -tulpn
 ```
+
+## History without Line Numbers
+
+`bash`
+```bash
+history | tr -s ' ' | cut -d ' ' -f3-
+```
+
+`zsh` or `ksh`
+```bash
+history -n
+```
+
+## clock skew error
+
+```
+sudo ntpdate $IP
+```
+
+## SSH Config
+https://phoenixnap.com/kb/ssh-config
+
+### gssapi error (kerberos)
+
+```bash
+sudo vim /etc/ssh/ssh_config
+```
+
+```bash
+Host *
+	...
+   GSSAPIAuthentication yes  
+   GSSAPIDelegateCredentials yes  
+   GSSAPIKeyExchange yes  
+   GSSAPITrustDNS yes
+   ...
+```
+   
+
+## Untar Unzip
+
+```
+gunzip -d file.tar.gz
+```
+
+```
+tar -xf file.tar
+```
+- -x: Extract files from an archive.
+- -f: Specify the archive file.

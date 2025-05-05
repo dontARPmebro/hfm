@@ -8,31 +8,34 @@
         "type": "tabs",
         "children": [
           {
+            "id": "ead927c6e229fbec",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Appendix G - Box Lists/OSCP/HTB Box List.canvas",
+                "viewState": {
+                  "x": -505,
+                  "y": -310,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "HTB Box List"
+            }
+          },
+          {
             "id": "56aab5bfd12516e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appendix E - Cheatsheets/HTB/Attacking Web Applications with Ffuf.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Attacking Web Applications with Ffuf"
-            }
-          },
-          {
-            "id": "62746a5d66971b9b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1. Information Gathering/Active Directory/Tools/Bloodhound.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Bloodhound"
+              "title": "README"
             }
           }
         ],
@@ -55,8 +58,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
+                "sortOrder": "alphabetical"
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -68,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "psremote",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,8 +91,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -180,42 +181,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "62746a5d66971b9b",
+  "active": "56aab5bfd12516e2",
   "lastOpenFiles": [
-    "Appendix E - Cheatsheets/HTB/Windows Privilege Escalation.md",
-    "Appendix B - Windows OS/System Enumeration.md",
-    "Appendix E - Cheatsheets/Enumeration.md",
-    "Appendix E - Cheatsheets/Op Notes Template 1.md",
-    "Appendix B - Windows OS/Tricks.md",
-    "Appendix B - Windows OS/Domain Enumeration.md",
-    "4. Post-Exploitation/Post-Exploitation.canvas",
-    "4. Post-Exploitation/Fully Interactive TTY.md",
-    "Appendix E - Cheatsheets/HTB/Active Directory Enumeration & Attacks.md",
-    "Appendix E - Cheatsheets/HTB/Command Injection.md",
-    "Appendix E - Cheatsheets/HTB/Attacking Common Services.md",
-    "Appendix E - Cheatsheets/HTB/Attacking Common Applications.md",
-    "Appendix A - Linux OS/System Enumeration.md",
-    "1. Information Gathering/Service Enumeration/MySQL (3306).md",
-    "3. Exploitation/Service Exploitation/MySQL.md",
-    "2. Pre-Exploitation/Shells/Escape Shell Jail.md",
-    "Appendix E - Cheatsheets/HTB/Attacking Web Applications with Ffuf.md",
-    "1. Information Gathering/Web Enumeration/Active.md",
-    "6. NetExec/NetExec.canvas",
-    "5. Lateral Movement/Lateral Movement.canvas",
-    "Appendix A - Linux OS/PublicKey Authentication.md",
-    "1. Information Gathering/Service Enumeration/SNMP (512,162,10161,10162).md",
-    "1. Information Gathering/Service Enumeration/SMTP (25,465,587).md",
-    "1. Information Gathering/Service Enumeration/SMB (139,445).md",
-    "Appendix E - Cheatsheets/HTB/File Transfers.md",
-    "Appendix E - Cheatsheets/HTB/File Inclusion.md",
-    "Appendix E - Cheatsheets/HTB/Web Attacks.md",
-    "1. Information Gathering/Application Enumeration/Joomla.md",
-    "3. Exploitation/Application Exploitation/joomla.md",
-    "Appendix E - Cheatsheets/HTB/Wireless",
-    "Appendix E - Cheatsheets/HTB/Forensics",
     "Index.canvas",
+    "Appendix C - Operational Notes/HTB/Complete/Jab/Op Notes.md",
+    "README.md",
     "Appendix G - Box Lists/OSCP/TJNull Box List.canvas",
     "Appendix G - Box Lists/OSCP/HTB Box List.canvas",
+    "Appendix G - Box Lists/OSCP/Lists.md",
+    "Appendix C - Operational Notes/HTB/In Progress/Chemistry/Op Notes.md",
+    "Appendix C - Operational Notes/HTB/In Progress/UpDown/Op Notes.md",
     "Appendix C - Operational Notes/HTB/Complete/Compiled/attachments/Pasted image 20241018150322.png",
     "Appendix C - Operational Notes/HTB/Complete/Compiled/attachments/Pasted image 20241011150111.png",
     "Appendix C - Operational Notes/HTB/Complete/Compiled/attachments/Pasted image 20241011150045.png",
@@ -226,12 +201,25 @@
     "Appendix C - Operational Notes/HTB/Complete/Compiled/attachments/Pasted image 20240913143843.png",
     "Appendix C - Operational Notes/HTB/Complete/Compiled/attachments/Pasted image 20240913142708.png",
     "Appendix C - Operational Notes/HTB/Complete/Compiled/attachments/Pasted image 20240913142648.png",
+    "Appendix C - Operational Notes/HTB/Complete/Compiled/Op Notes.md",
     "Appendix C - Operational Notes/HTB/Complete/Compiled/attachments",
     "Appendix C - Operational Notes/HTB/Complete/Compiled",
+    "Appendix C - Operational Notes/HTB/Complete/Busqueda/Op Notes.md",
     "Appendix C - Operational Notes/HTB/Complete/Busqueda",
+    "Appendix C - Operational Notes/HTB/Complete/Broker/Op Notes.md",
     "Appendix C - Operational Notes/HTB/Complete/Broker",
+    "Appendix C - Operational Notes/HTB/In Progress/Compiled/Op Notes.md",
+    "Appendix F - Scripts/OSCP Scripts.md",
+    "Appendix E - Cheatsheets/Enumeration.md",
+    "Appendix E - Cheatsheets/Op Notes Template 1.md",
     "Appendix G - Box Lists/OSCP/PG Box List.canvas",
     "Appendix C - Operational Notes/HTB/Complete/Bashed/attachments",
-    "Appendix C - Operational Notes/HTB/Complete/Bashed"
+    "Appendix C - Operational Notes/HTB/Complete/Bashed/Op Notes.md",
+    "Appendix C - Operational Notes/HTB/Complete/Bashed",
+    "Appendix D - Tools/winPEAS.md",
+    "Appendix C - Operational Notes/HTB/Complete/Cicada/Op Notes.md",
+    "1. Information Gathering/Service Enumeration/SMB (139,445).md",
+    "Appendix B - Windows OS/System Enumeration.md",
+    "Appendix C - Operational Notes/HTB/In Progress/Cicada/Op Notes.md"
   ]
 }

@@ -192,7 +192,7 @@ ls /etc/cron.*
 ## File ownership
 Bob is a user on this machine. What is every single file he has ever created?
 ```
-find / -user chris 2>/dev/null
+find / -user aero 2>/dev/null
 ```
 ## Got Mail?
 ```

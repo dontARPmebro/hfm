@@ -20,3 +20,6 @@ pipx ensurepath
 
 List of tools and more
 https://github.com/MAX-P0W3R/Cheat-Sheets
+
+## Username Generator
+ADGenerator.py

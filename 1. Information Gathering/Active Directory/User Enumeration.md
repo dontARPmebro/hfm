@@ -2,6 +2,7 @@
 
 ## Without Access
 ### kerbrute
+https://github.com/ropnop/kerbrute/releases
 ```
 ./kerbrute_linux_amd64 userenum -d jab.htb  --dc dc01.jab.htb /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt -o /home/kali/htb/jab/valid_ad_users
 ```
