@@ -1,5 +1,5 @@
-# Hacker Field Manuel - Obsidian Backup
-Hacker Field Manuel
+# Hacker Field Manual - Obsidian Backup
+Hacker Field Manual
 
 ```
       _             _      _    ____  ____                 _               
