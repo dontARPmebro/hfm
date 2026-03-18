@@ -1,3 +1,6 @@
+# Testers Field Manuel
+This is a consolidation of the HFM focused mainly on real world pentesting.
+
 # Information Gathering
 
 ## Active Directory
